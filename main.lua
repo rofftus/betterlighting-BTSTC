@@ -143,11 +143,13 @@ for i,v in pairs(blocks:GetDescendants()) do
 	end
 end
 
-plrblocks.ChildAdded:Connect(function(v)
-	if v:IsA("BasePart") then
-		v.Color = Shift(v.Color, math.random(-6, 6))
-	end
-end)
+for i,v in pairs(blocks:GetChildren()) do
+	v.ChildAdded:Connect(function(v)
+		if v:IsA("BasePart") then
+			v.Color = Shift(v.Color, math.random(-6, 6))
+		end
+	end)
+end
 
 --// Night and day
 
