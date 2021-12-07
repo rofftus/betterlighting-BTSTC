@@ -7,8 +7,6 @@ local lighting = game:GetService("Lighting")
 
 local map = workspace:FindFirstChild("Map")
 local blocks = workspace:FindFirstChild("Blocks")
-	local plrblocks = blocks.PlayerBlocks
-	local starterblocks = blocks.StarterBlocks
 local water = workspace:FindFirstChild("Water")
 
 --[[====| Functions |====]]--
@@ -119,7 +117,7 @@ end
 
 --// Random colors for parts
 
-for i,v in pairs(plrblocks:GetChildren()) do
+for i,v in pairs(blocks:GetDescendants()) do
 	if v:IsA("BasePart") then
 		v.Color = Shift(v.Color, math.random(-6, 6))
 		--local light = Create("PointLight", {
