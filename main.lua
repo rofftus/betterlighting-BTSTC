@@ -5,9 +5,9 @@ repeat task.wait() until game.Players.LocalPlayer.Character
 
 local lighting = game:GetService("Lighting")
 
-local map = workspace:FindFirstChild("Map")
-local blocks = workspace:FindFirstChild("Blocks")
-local water = workspace:FindFirstChild("Water")
+local map = workspace:WaitForChild("Map")
+local blocks = workspace:WaitForChild("Blocks")
+local water = workspace:WaitForChild("Water")
 
 --[[====| Functions |====]]--
 
